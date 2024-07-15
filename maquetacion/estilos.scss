@@ -1,0 +1,409 @@
+
+$coral: #EF8354;
+// $strong-coral: #db6431;
+$strong-coral: #e67e22;
+$stronger-coral: #d86704;
+$gunmetal: #2D3142;
+$ghost_white: #F8F4F9;
+$blue_grey: #6699CC;
+$slate_grey: #718F94;
+$battleship-grey: #808F85;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  font-family: 'Nunito';
+  background-color: $gunmetal;
+
+}
+
+
+body {
+  font-family: "Nunito", "Rubik" ;
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+// HTML tags
+h1{
+  font-size: 14rem;
+}
+
+h2{
+  font-size: 8rem;
+}
+
+h3{
+  font-size: 5rem;
+}
+h4{
+  font-size: 3rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+// REUSABLE
+
+.btn{
+  // margin: 1rem auto;
+  width: 25rem;
+  height: 5rem;
+  background-color: $strong-coral;
+  color: $gunmetal;
+  font-size: 2rem;
+  font-weight:600;
+  border-radius: 9px;
+  cursor: pointer;
+  &:hover{
+    // background-color: $gunmetal;
+    // border: 2px solid $strong-coral;
+    // color: $strong-coral;
+    background-color: $stronger-coral;
+    transition: all 0.5s;
+    color: $ghost_white;
+
+  }
+}
+
+.container{
+  max-width: 140rem;
+  // padding: 0 3.2rem;
+  margin: auto;
+}
+
+// HEADER
+
+.header{
+  
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 0.5rem 4rem;
+  align-items: center;
+  // border-bottom: 1px solid #2D3142 ;
+  
+  .mainNav{
+    // margin: auto;
+    justify-self: flex-end;
+    // margin-top: 5rem;
+    // margin-bottom: 3rem;
+    height: 5rem;
+    text-align: right;
+    align-items: center;
+    display: flex;
+    
+    a {
+      
+      background-color: $gunmetal;
+      color: $ghost_white;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 2.5rem;
+    }
+    
+    a:hover{
+      color: $coral;
+      transition: all 0.8s;
+    }
+    a.selected{
+      // background-color: $coral;
+      // border: 4px solid black;
+      // color: $ghost_white;
+      color: $coral;
+    }
+    
+  }
+  
+  .eye {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    border: 5px solid black;
+    background: linear-gradient(to left, #90450D, #E8BB05, #55A917);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pupile {
+      width: 3.2rem;
+      height: 3.2rem;
+      background-color: black;
+      border-radius: 100%;
+      position: absolute;
+      // margin: auto;
+      // padding: auto;
+      
+      
+    }
+  }
+  .eye::after{
+    content: "";
+    width: 25%;
+    background-color: white;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(99%, -12%);
+    z-index: 2;
+    padding-bottom: 20%;
+  }
+  
+}
+
+// SECTION 1: PRESENTATION
+
+.zero {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  .main{
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    margin-bottom: 5rem;
+    .side-section{
+      div.person-image img{
+        align-self: center;
+        margin: auto;
+        width: 40rem;
+        // height: ;
+        border-radius: 50% 20% / 10% 40%;
+      }
+  
+      .social-media{
+        margin-top: 5rem;
+        display: flex;
+        // gap: 2rem;
+        align-items: center;
+        justify-content: space-around;
+        border: 8px solid $ghost_white;
+        border-radius: 20px;
+        padding: 1rem 0;
+        .social{
+            width: 8rem;
+            // display: block;
+            height: 8rem;
+            filter: invert(66%) sepia(75%) saturate(3581%) hue-rotate(351deg) brightness(97%) contrast(85%);
+            
+        }
+  
+        .social:hover{
+          filter: invert(91%) sepia(72%) saturate(2802%) hue-rotate(184deg) brightness(117%) contrast(95%);
+          transition: all 0.2s;
+        }
+      }
+    }
+    
+    .presentation{
+      display: block;
+      
+      div.title{
+        margin-bottom: 1.5rem;
+        h1{
+          margin-bottom: 4rem;
+          color: $strong-coral;
+        }
+        h2{
+          margin-bottom: 0.5rem;
+          color: $ghost_white;
+        }
+        p {
+          color: $ghost_white;
+        }
+      }
+      div.content{
+          font-size: 3rem;
+          line-height: 1.6;
+          color: $battleship-grey;
+      }
+    }
+  }
+  .animated-text{
+    color: $ghost_white;
+    margin-bottom: 5rem;
+    display: flex;
+    font-size: 10rem;
+    // display: inline-block;
+    // h1{
+    //   display: inline;
+    // }
+    gap: 10px;
+    bold{
+      color: $strong-coral;
+      &.back{
+        color: #048BA8;
+      }
+
+      &.sass{
+        // color: #048BA8;
+        // color: #2E4057;
+        color: #058C42;
+      }
+    }
+
+    .bar{
+      // display: inline;
+      // width:;
+      border: 5px solid $strong-coral;
+      width: 1px;
+
+      -webkit-transition-property: -webkit-transform;
+      -webkit-transition-duration: 0.8s;
+      -webkit-animation-name: cursor;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      
+      -moz-transition-property: -moz-transform;
+      -moz-animation-name: cursor; 
+      -moz-animation-duration: 0.8s; 
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      
+      transition-property: transform;
+      animation-name: cursor; 
+      animation-duration: 0.8s; 
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      // height: 100%;
+    }
+  }
+
+}
+
+@-webkit-keyframes cursor {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@-moz-keyframes cursors {
+  from {opacity: 1;}
+  to {opacity: 0;}
+  // from {-moz-transform: rotate(0deg);}
+  // to {-moz-transform: rotate(360deg);}
+}
+
+@keyframes cursor {
+  from {opacity: 1;}
+  to {opacity: 0;}
+  // from {transform: rotate(0deg);}
+  // to {transform: rotate(360deg);}
+}
+
+
+
+
+// SECTION 2: RESUMEN
+
+.resume{
+  background-color: $ghost_white;
+  color: $gunmetal;
+  padding: 5rem 0;
+  .roadmap{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 1.8rem;
+    // color: $ghost_white;
+    .information{
+      display: none;
+    }
+    .active{
+      display: block;
+    }
+    // .logo{
+    //   width: 20rem;
+    //   background-color: $ghost_white;
+    // }
+  }
+
+  .road {
+    &-right{
+      background-color: $ghost_white;
+    }
+  }
+}
+
+// SECTION 3: PORTFOLIO
+.portfolio{
+  margin: 5rem auto;
+  color: $coral;
+  .main{
+    margin-top: 2rem;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;
+    column-gap: 10rem;
+    
+    div.card {
+      display: flex;
+      flex-direction: column;
+      width: 30rem;
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.700);
+      border-radius: 12px;
+      // height: 53rem;
+      > img {
+        height: 20rem;
+        border-radius: 12px 12px 0 0;
+      }
+      .main-content {
+        margin: 1.5rem 1.5rem;
+        // height: 100%;
+        // display: flex;
+  
+          h3 {
+            color: $strong-coral;
+            margin-bottom: 2rem;
+            font-size: 3rem;
+          }
+  
+          .technologies  {
+            margin-bottom: 2rem;
+            display: flex;
+            // align-items: center;
+            // margin: 0 auto
+            justify-content:center;
+  
+            gap: 2rem;
+            img {
+              width: 3rem;
+              height: 3rem;
+              // stroke: $ghost_white;
+              filter: invert(91%) sepia(72%) saturate(2802%) hue-rotate(184deg) brightness(117%) contrast(95%);
+            }
+          }
+        .description {
+            color: $ghost_white;
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+  
+        .btn{
+          // margin: auto;
+          margin: 1rem 0;
+          width: 100%;
+          // justify-content: center;
+          text-align: center;
+          // margin: 0 auto;
+          // margin: 1rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+// SECTION 4: SKILLS
+// SECTION 5: CONTACT (FOOTER)

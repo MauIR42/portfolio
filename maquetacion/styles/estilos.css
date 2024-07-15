@@ -1,0 +1,313 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  font-family: "Nunito";
+  background-color: #2D3142;
+}
+
+body {
+  font-family: "Nunito", "Rubik";
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 14rem;
+}
+
+h2 {
+  font-size: 8rem;
+}
+
+h3 {
+  font-size: 5rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  width: 25rem;
+  height: 5rem;
+  background-color: #e67e22;
+  color: #2D3142;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #d86704;
+  transition: all 0.5s;
+  color: #F8F4F9;
+}
+
+.container {
+  max-width: 140rem;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 0.5rem 4rem;
+  align-items: center;
+}
+.header .mainNav {
+  justify-self: flex-end;
+  height: 5rem;
+  text-align: right;
+  align-items: center;
+  display: flex;
+}
+.header .mainNav a {
+  background-color: #2D3142;
+  color: #F8F4F9;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 2.5rem;
+}
+.header .mainNav a:hover {
+  color: #EF8354;
+  transition: all 0.8s;
+}
+.header .mainNav a.selected {
+  color: #EF8354;
+}
+.header .eye {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  border: 5px solid black;
+  background: linear-gradient(to left, #90450D, #E8BB05, #55A917);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .eye .pupile {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+}
+.header .eye::after {
+  content: "";
+  width: 25%;
+  background-color: white;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(99%, -12%);
+  z-index: 2;
+  padding-bottom: 20%;
+}
+
+.zero {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+.zero .main {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  margin-bottom: 5rem;
+}
+.zero .main .side-section div.person-image img {
+  align-self: center;
+  margin: auto;
+  width: 40rem;
+  border-radius: 50% 20%/10% 40%;
+}
+.zero .main .side-section .social-media {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 8px solid #F8F4F9;
+  border-radius: 20px;
+  padding: 1rem 0;
+}
+.zero .main .side-section .social-media .social {
+  width: 8rem;
+  height: 8rem;
+  filter: invert(66%) sepia(75%) saturate(3581%) hue-rotate(351deg) brightness(97%) contrast(85%);
+}
+.zero .main .side-section .social-media .social:hover {
+  filter: invert(91%) sepia(72%) saturate(2802%) hue-rotate(184deg) brightness(117%) contrast(95%);
+  transition: all 0.2s;
+}
+.zero .main .presentation {
+  display: block;
+}
+.zero .main .presentation div.title {
+  margin-bottom: 1.5rem;
+}
+.zero .main .presentation div.title h1 {
+  margin-bottom: 4rem;
+  color: #e67e22;
+}
+.zero .main .presentation div.title h2 {
+  margin-bottom: 0.5rem;
+  color: #F8F4F9;
+}
+.zero .main .presentation div.title p {
+  color: #F8F4F9;
+}
+.zero .main .presentation div.content {
+  font-size: 3rem;
+  line-height: 1.6;
+  color: #808F85;
+}
+.zero .animated-text {
+  color: #F8F4F9;
+  margin-bottom: 5rem;
+  display: flex;
+  font-size: 10rem;
+  gap: 10px;
+}
+.zero .animated-text bold {
+  color: #e67e22;
+}
+.zero .animated-text bold.back {
+  color: #048BA8;
+}
+.zero .animated-text bold.sass {
+  color: #058C42;
+}
+.zero .animated-text .bar {
+  border: 5px solid #e67e22;
+  width: 1px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0.8s;
+  -webkit-animation-name: cursor;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-transition-property: -moz-transform;
+  -moz-animation-name: cursor;
+  -moz-animation-duration: 0.8s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  transition-property: transform;
+  animation-name: cursor;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes cursor {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes cursors {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes cursor {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.resume {
+  background-color: #F8F4F9;
+  color: #2D3142;
+  padding: 5rem 0;
+}
+.resume .roadmap {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  font-size: 1.8rem;
+}
+.resume .roadmap .information {
+  display: none;
+}
+.resume .roadmap .active {
+  display: block;
+}
+.resume .road-right {
+  background-color: #F8F4F9;
+}
+
+.portfolio {
+  margin: 5rem auto;
+  color: #EF8354;
+}
+.portfolio .main {
+  margin-top: 2rem;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 4rem;
+  column-gap: 10rem;
+}
+.portfolio .main div.card {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+}
+.portfolio .main div.card > img {
+  height: 20rem;
+  border-radius: 12px 12px 0 0;
+}
+.portfolio .main div.card .main-content {
+  margin: 1.5rem 1.5rem;
+}
+.portfolio .main div.card .main-content h3 {
+  color: #e67e22;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.portfolio .main div.card .main-content .technologies {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.portfolio .main div.card .main-content .technologies img {
+  width: 3rem;
+  height: 3rem;
+  filter: invert(91%) sepia(72%) saturate(2802%) hue-rotate(184deg) brightness(117%) contrast(95%);
+}
+.portfolio .main div.card .main-content .description {
+  color: #F8F4F9;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+.portfolio .main div.card .main-content .btn {
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=estilos.css.map */
