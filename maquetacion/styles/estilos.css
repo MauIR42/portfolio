@@ -58,7 +58,7 @@ a {
 }
 
 .container {
-  max-width: 140rem;
+  max-width: 120rem;
   margin: auto;
 }
 
@@ -193,7 +193,7 @@ a {
   color: #058C42;
 }
 .zero .animated-text .bar {
-  border: 5px solid #e67e22;
+  border: 5px solid #058C42;
   width: 1px;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 0.8s;
@@ -275,6 +275,7 @@ a {
   width: 30rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.7);
   border-radius: 12px;
+  transition: all 0.5s;
 }
 .portfolio .main div.card > img {
   height: 20rem;
@@ -308,6 +309,11 @@ a {
   margin: 1rem 0;
   width: 100%;
   text-align: center;
+}
+.portfolio .main div.card:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(230, 126, 34, 0.7);
+  transition: all 0.5s;
 }
 
 /*# sourceMappingURL=estilos.css.map */

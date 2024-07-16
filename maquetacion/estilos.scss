@@ -80,7 +80,7 @@ a{
 }
 
 .container{
-  max-width: 140rem;
+  max-width: 120rem;
   // padding: 0 3.2rem;
   margin: auto;
 }
@@ -257,7 +257,7 @@ a{
     .bar{
       // display: inline;
       // width:;
-      border: 5px solid $strong-coral;
+      border: 5px solid #058C42;
       width: 1px;
 
       -webkit-transition-property: -webkit-transform;
@@ -355,6 +355,7 @@ a{
       box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.700);
       border-radius: 12px;
       // height: 53rem;
+      transition: all 0.5s;
       > img {
         height: 20rem;
         border-radius: 12px 12px 0 0;
@@ -400,6 +401,11 @@ a{
           // margin: 0 auto;
           // margin: 1rem 1rem;
         }
+      }
+      &:hover{
+        transform: translateY(-1.2rem);
+        box-shadow: 0 3.2rem 6.4rem rgba(230, 126, 34, 0.700);
+        transition: all 0.5s;
       }
     }
   }
