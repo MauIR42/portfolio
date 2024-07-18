@@ -312,15 +312,96 @@ a{
   color: $gunmetal;
   padding: 5rem 0;
   .roadmap{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    // display: grid;
+    // grid-template-columns: 2fr 1fr;
     font-size: 1.8rem;
+    margin: 4rem 0;
     // color: $ghost_white;
-    .information{
-      display: none;
-    }
-    .active{
-      display: block;
+    .road-row{
+      display: flex;
+      .experience{
+        line-height: 1.5;
+        width: 80rem;
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.700);
+        // padding: 0 2rem;
+        margin-bottom: 6rem;
+        padding: 2rem 2rem;
+        border-radius: 12px;
+        .title{
+          font-size: 2.1rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+        .basic{
+          display: inline-block;
+          background-color: $gunmetal;
+          color: $ghost_white;
+          // width: 50rem;
+          border-radius: 12px;
+          // padding: 1rem 3rem;
+          padding: 1rem;
+          bold{
+            color: $coral;
+          }
+
+        }
+        .description{
+          margin-top: 1rem;
+          display: none;
+          // text-align: justify;
+          color: $gunmetal;
+          font-weight: 400;
+          line-height: 1.6;
+          // letter-spacing: 1;
+          &.active{
+            display: block;
+          }
+        }
+
+        &.right{
+          text-align: right;
+        }
+      }
+      .road{
+        width: 40rem;
+        // z-index: 5;
+        // display: flex;
+        // align-items: center;
+        margin: auto;
+        .line {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          overflow: hidden;
+          .dot{
+            width: 5rem;
+            height: 2rem;
+            background-color: $gunmetal;
+            // &:nth-last-child(){
+            //   // rot
+            // }
+          }
+
+          &.col {
+            flex-direction: column;
+            // justify-content: ;
+            align-items: end;
+            .dot{
+              height: 5rem;
+              width: 2rem;
+            }
+          
+          }
+
+        }
+
+        &.left {
+          .line.col{
+            align-items: start;
+          }
+        }
+      }
+      
     }
     // .logo{
     //   width: 20rem;

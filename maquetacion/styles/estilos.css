@@ -242,15 +242,73 @@ a {
   padding: 5rem 0;
 }
 .resume .roadmap {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   font-size: 1.8rem;
+  margin: 4rem 0;
 }
-.resume .roadmap .information {
+.resume .roadmap .road-row {
+  display: flex;
+}
+.resume .roadmap .road-row .experience {
+  line-height: 1.5;
+  width: 80rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.7);
+  margin-bottom: 6rem;
+  padding: 2rem 2rem;
+  border-radius: 12px;
+}
+.resume .roadmap .road-row .experience .title {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.resume .roadmap .road-row .experience .basic {
+  display: inline-block;
+  background-color: #2D3142;
+  color: #F8F4F9;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.resume .roadmap .road-row .experience .basic bold {
+  color: #EF8354;
+}
+.resume .roadmap .road-row .experience .description {
+  margin-top: 1rem;
   display: none;
+  color: #2D3142;
+  font-weight: 400;
+  line-height: 1.6;
 }
-.resume .roadmap .active {
+.resume .roadmap .road-row .experience .description.active {
   display: block;
+}
+.resume .roadmap .road-row .experience.right {
+  text-align: right;
+}
+.resume .roadmap .road-row .road {
+  width: 40rem;
+  margin: auto;
+}
+.resume .roadmap .road-row .road .line {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+}
+.resume .roadmap .road-row .road .line .dot {
+  width: 5rem;
+  height: 2rem;
+  background-color: #2D3142;
+}
+.resume .roadmap .road-row .road .line.col {
+  flex-direction: column;
+  align-items: end;
+}
+.resume .roadmap .road-row .road .line.col .dot {
+  height: 5rem;
+  width: 2rem;
+}
+.resume .roadmap .road-row .road.left .line.col {
+  align-items: start;
 }
 .resume .road-right {
   background-color: #F8F4F9;
