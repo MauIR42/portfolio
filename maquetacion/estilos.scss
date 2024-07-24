@@ -1,4 +1,7 @@
 
+
+// icons https://www.svgrepo.com/svg/27103/framework
+// colors https://coolors.co/
 $coral: #EF8354;
 // $strong-coral: #db6431;
 $strong-coral: #e67e22;
@@ -80,7 +83,7 @@ a{
 }
 
 .container{
-  max-width: 120rem;
+  max-width: 130rem;
   // padding: 0 3.2rem;
   margin: auto;
 }
@@ -493,4 +496,32 @@ a{
 }
 
 // SECTION 4: SKILLS
+
+.skills{
+  display: flex;
+  .section{
+    .title{
+      font-size: 2rem;
+      color: $strong-coral;
+    }
+    .skill {
+      p{
+        font-size: 1rem;
+        color: $ghost_white;
+      }
+      img{
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  
+
+  &.column {
+    flex-direction: column;
+  }
+}
+
+
 // SECTION 5: CONTACT (FOOTER)

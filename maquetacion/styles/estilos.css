@@ -58,7 +58,7 @@ a {
 }
 
 .container {
-  max-width: 120rem;
+  max-width: 130rem;
   margin: auto;
 }
 
@@ -372,6 +372,25 @@ a {
   transform: translateY(-1.2rem);
   box-shadow: 0 3.2rem 6.4rem rgba(230, 126, 34, 0.7);
   transition: all 0.5s;
+}
+
+.skills {
+  display: flex;
+}
+.skills .section .title {
+  font-size: 2rem;
+  color: #e67e22;
+}
+.skills .section .skill p {
+  font-size: 1rem;
+  color: #F8F4F9;
+}
+.skills .section .skill img {
+  width: 2rem;
+  height: 2rem;
+}
+.skills.column {
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=estilos.css.map */
