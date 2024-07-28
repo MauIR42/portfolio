@@ -62,6 +62,36 @@ a {
   margin: auto;
 }
 
+.eye {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  border: 5px solid black;
+  background: linear-gradient(to left, #90450D, #E8BB05, #55A917);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eye .pupile {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.eye::after {
+  content: "";
+  width: 25%;
+  background-color: white;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(99%, -12%);
+  z-index: 2;
+  padding-bottom: 20%;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -90,34 +120,6 @@ a {
 }
 .header .mainNav a.selected {
   color: #EF8354;
-}
-.header .eye {
-  width: 7rem;
-  height: 7rem;
-  border-radius: 100%;
-  border: 5px solid black;
-  background: linear-gradient(to left, #90450D, #E8BB05, #55A917);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header .eye .pupile {
-  width: 3.2rem;
-  height: 3.2rem;
-  background-color: black;
-  border-radius: 100%;
-  position: absolute;
-}
-.header .eye::after {
-  content: "";
-  width: 25%;
-  background-color: white;
-  border-radius: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(99%, -12%);
-  z-index: 2;
-  padding-bottom: 20%;
 }
 
 .zero {
@@ -252,6 +254,8 @@ a {
   line-height: 1.5;
   width: 80rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.7);
+  background-color: #2D3142;
+  color: #F8F4F9;
   margin-bottom: 6rem;
   padding: 2rem 2rem;
   border-radius: 12px;
@@ -274,7 +278,7 @@ a {
 .resume .roadmap .road-row .experience .description {
   margin-top: 1rem;
   display: none;
-  color: #2D3142;
+  color: #F8F4F9;
   font-weight: 400;
   line-height: 1.6;
 }
@@ -374,23 +378,68 @@ a {
   transition: all 0.5s;
 }
 
-.skills {
+.skills-section h2 {
+  color: white;
+  margin-bottom: 2rem;
+}
+.skills-section .skills {
   display: flex;
+  gap: 7rem;
+  margin-bottom: 2rem;
 }
-.skills .section .title {
-  font-size: 2rem;
+.skills-section .skills.column {
+  flex-direction: column;
+  margin: 0;
+  gap: 2rem;
+}
+.skills-section .skills .section.white img {
+  filter: invert(91%) sepia(72%) saturate(2802%) hue-rotate(184deg) brightness(117%) contrast(95%);
+}
+.skills-section .skills .section .title {
+  font-size: 3rem;
   color: #e67e22;
+  margin-bottom: 1rem;
 }
-.skills .section .skill p {
-  font-size: 1rem;
+.skills-section .skills .section .skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 0.5rem;
+}
+.skills-section .skills .section .skill p {
+  font-size: 2rem;
   color: #F8F4F9;
 }
-.skills .section .skill img {
-  width: 2rem;
-  height: 2rem;
+.skills-section .skills .section .skill img {
+  width: 3rem;
+  height: 3rem;
 }
-.skills.column {
+.skills-section .skills .section .skill img.normal {
+  filter: none;
+}
+.skills-section .skills.column {
   flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+.footer .content {
+  color: #2D3142;
+  background-color: #F8F4F9;
+  border-radius: 15px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+.footer .content h5 {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */
