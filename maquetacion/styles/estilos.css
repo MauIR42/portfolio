@@ -132,7 +132,7 @@ a {
   gap: 10rem;
   margin-bottom: 5rem;
 }
-.zero .main .side-section div.person-image img {
+.zero .main .side-section .person-image img {
   align-self: center;
   margin: auto;
   width: 40rem;
@@ -325,8 +325,8 @@ a {
 .portfolio .main {
   margin-top: 2rem;
   display: grid;
-  justify-content: space-between;
   align-items: center;
+  justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 4rem;
   column-gap: 10rem;
@@ -387,7 +387,11 @@ a {
   gap: 7rem;
   margin-bottom: 2rem;
 }
+.skills-section .skills.small {
+  display: none;
+}
 .skills-section .skills.column {
+  display: flex;
   flex-direction: column;
   margin: 0;
   gap: 2rem;
@@ -405,7 +409,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-  margin-bottom: 0.5rem;
+  margin: 0 1rem 0.6rem;
 }
 .skills-section .skills .section .skill p {
   font-size: 2rem;
@@ -440,6 +444,200 @@ a {
 }
 .footer .content h5 {
   font-size: 1.5rem;
+}
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+@media (max-width: 84rem) {
+  .container {
+    max-width: 100rem;
+  }
+  .zero .main .presentation div.content {
+    font-size: 2.5rem;
+  }
+  .resume {
+    padding: 2.5rem;
+  }
+  .resume .roadmap {
+    margin: 2rem 0;
+  }
+  .portfolio .main {
+    column-gap: 3rem;
+  }
+  .portfolio .main div.card {
+    width: 25rem;
+  }
+  .portfolio .main div.card .main-content h3 {
+    font-size: 2.7rem;
+  }
+  .portfolio .main div.card .main-content .description {
+    font-size: 1.7rem;
+  }
+  .skills-section .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 3rem;
+  }
+  .skills-section .skills.small {
+    display: block;
+  }
+  .skills-section .skills .section.normal {
+    display: none;
+  }
+}
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75rem) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+  .portfolio .main {
+    justify-items: center;
+  }
+}
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media (max-width: 60em) {
+  .container {
+    max-width: 80rem;
+  }
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+  .zero .main .side-section .person-image img {
+    width: 25rem;
+  }
+  .zero .main .side-section .social-media {
+    border-width: 5px;
+    margin-top: 3rem;
+  }
+  .zero .main .side-section .social-media .social {
+    width: 6rem;
+    height: 6rem;
+  }
+  .resume .container.small {
+    max-width: 100rem;
+  }
+  .resume .container.small .roadmap {
+    font-size: 2rem;
+  }
+  .resume .container.small .roadmap .road {
+    display: none;
+  }
+  .resume .container.small .roadmap .road-row {
+    align-items: center;
+    justify-content: center;
+  }
+  .resume .container.small .roadmap .road-row .experience {
+    width: 80%;
+    padding: 2rem 3rem;
+  }
+  .resume .container.small .roadmap .road-row .experience .title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .portfolio .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio .main div.card {
+    width: 30rem;
+  }
+}
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+@media (max-width: 48em) {
+  h1 {
+    font-size: 10rem;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+  .container {
+    max-width: 70rem;
+  }
+  .zero .main {
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .zero .main .side-section {
+    max-width: 70rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  .zero .main .side-section .person-image img {
+    width: 20rem;
+  }
+  .zero .main .side-section .social-media {
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+  }
+  .zero .main .side-section .social-media img.social {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+@media (max-width: 34em) {
+  .container {
+    max-width: 50rem;
+  }
+  .portfolio .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills-section .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 27em) {
+  .container {
+    max-width: 40rem;
+  }
+  .zero .main {
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .zero .main .side-section {
+    max-width: 70rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  .zero .main .side-section .person-image img {
+    width: 15rem;
+  }
+  .zero .main .side-section .social-media {
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+  }
+  .zero .main .side-section .social-media img.social {
+    width: 4rem;
+    height: 4rem;
+  }
+  .skills-section .skills {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills-section .skills .section .skill {
+    font-size: 2.5rem;
+    margin: 0 2rem 1.2rem;
+  }
+  .skills-section .skills .section .skill img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
