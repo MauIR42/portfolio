@@ -166,9 +166,29 @@ a {
   margin-bottom: 4rem;
   color: #e67e22;
 }
-.zero .main .presentation div.title h2 {
+.zero .main .presentation div.title .animated {
+  display: flex;
+}
+.zero .main .presentation div.title .animated h2 {
   margin-bottom: 0.5rem;
   color: #F8F4F9;
+  padding-right: 5px;
+  border-right: 5px solid #F8F4F9;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0.8s;
+  -webkit-animation-name: cursor;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-transition-property: -moz-transform;
+  -moz-animation-name: cursor;
+  -moz-animation-duration: 0.8s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  transition-property: transform;
+  animation-name: cursor;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .zero .main .presentation div.title p {
   color: #F8F4F9;
@@ -194,48 +214,29 @@ a {
 .zero .animated-text bold.sass {
   color: #058C42;
 }
-.zero .animated-text .bar {
-  border: 5px solid #058C42;
-  width: 1px;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 0.8s;
-  -webkit-animation-name: cursor;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-transition-property: -moz-transform;
-  -moz-animation-name: cursor;
-  -moz-animation-duration: 0.8s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
-  transition-property: transform;
-  animation-name: cursor;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
 
 @-webkit-keyframes cursor {
   from {
-    opacity: 1;
+    border-color: inherit;
   }
   to {
-    opacity: 0;
+    border-color: #2D3142;
   }
 }
 @-moz-keyframes cursors {
   from {
-    opacity: 1;
+    border-color: inherit;
   }
   to {
-    opacity: 0;
+    border-color: #2D3142;
   }
 }
 @keyframes cursor {
   from {
-    opacity: 1;
+    border-color: inherit;
   }
   to {
-    opacity: 0;
+    border-color: #2D3142;
   }
 }
 .resume {

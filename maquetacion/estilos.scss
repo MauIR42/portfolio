@@ -164,10 +164,10 @@ a{
     }
     
   }
-  
-  
-  
 }
+
+
+
 
 // SECTION 1: PRESENTATION
 
@@ -221,9 +221,34 @@ a{
           margin-bottom: 4rem;
           color: $strong-coral;
         }
-        h2{
-          margin-bottom: 0.5rem;
-          color: $ghost_white;
+        .animated{
+          display: flex;
+
+          h2{
+            margin-bottom: 0.5rem;
+            color: $ghost_white;
+            padding-right: 5px;
+            // border-color: $gunmetal;
+
+            border-right: 5px solid $ghost_white;
+            -webkit-transition-property: -webkit-transform;
+            -webkit-transition-duration: 0.8s;
+            -webkit-animation-name: cursor;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            
+            -moz-transition-property: -moz-transform;
+            -moz-animation-name: cursor; 
+            -moz-animation-duration: 0.8s; 
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+            
+            transition-property: transform;
+            animation-name: cursor; 
+            animation-duration: 0.8s; 
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
         }
         p {
           color: $ghost_white;
@@ -259,50 +284,25 @@ a{
       }
     }
 
-    .bar{
-      // display: inline;
-      // width:;
-      border: 5px solid #058C42;
-      width: 1px;
-
-      -webkit-transition-property: -webkit-transform;
-      -webkit-transition-duration: 0.8s;
-      -webkit-animation-name: cursor;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-      
-      -moz-transition-property: -moz-transform;
-      -moz-animation-name: cursor; 
-      -moz-animation-duration: 0.8s; 
-      -moz-animation-iteration-count: infinite;
-      -moz-animation-timing-function: linear;
-      
-      transition-property: transform;
-      animation-name: cursor; 
-      animation-duration: 0.8s; 
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      // height: 100%;
-    }
   }
 
 }
 
 @-webkit-keyframes cursor {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {border-color: inherit;}
+  to {border-color: $gunmetal;}
 }
 
 @-moz-keyframes cursors {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {border-color: inherit;}
+  to {border-color: $gunmetal;}
   // from {-moz-transform: rotate(0deg);}
   // to {-moz-transform: rotate(360deg);}
 }
 
 @keyframes cursor {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {border-color: inherit;}
+  to {border-color: $gunmetal;}
   // from {transform: rotate(0deg);}
   // to {transform: rotate(360deg);}
 }
