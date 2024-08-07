@@ -1,3 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+/* @layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
 * {
   padding: 0;
   margin: 0;
@@ -9,6 +43,7 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  overflow-x: hidden;
   font-family: "Nunito";
   background-color: #2D3142;
 }
@@ -17,6 +52,7 @@ body {
   font-family: "Nunito", "Rubik";
   line-height: 1;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -53,29 +89,6 @@ a {
   background-color: #d86704;
   transition: all 0.5s;
   color: #F8F4F9;
-}
-
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 20px;
-  top: 20px;
-  left: 20 px;
-  margin: 2rem;
-  height: 3rem;
-  width: 7rem;
-  border-radius: 8px;
-  text-align: center;
-  opacity: 50%;
-  margin-right: auto;
-  cursor: pointer;
-  background-color: #EF8354;
-  color: #F8F4F9;
-}
-.sticky p {
-  margin: 1rem;
-  text-align: center;
-  font-size: 1.5rem;
 }
 
 .container {
@@ -126,6 +139,8 @@ a {
   text-align: right;
   align-items: center;
   display: flex;
+  justify-content: center;
+
 }
 .header .mainNav a {
   background-color: #2D3142;
@@ -153,10 +168,17 @@ a {
   gap: 10rem;
   margin-bottom: 5rem;
 }
+
+.zero .main .side-section{
+  width: 40rem;
+}
+
 .zero .main .side-section .person-image img {
   align-self: center;
   margin: auto;
+  max-width: 40rem;
   width: 40rem;
+  height: auto;
   border-radius: 50% 20%/10% 40%;
 }
 .zero .main .side-section .social-media {
@@ -226,13 +248,13 @@ a {
   font-size: 10rem;
   gap: 10px;
 }
-.zero .animated-text bold {
+.zero .animated-text b {
   color: #e67e22;
 }
-.zero .animated-text bold.back {
+.zero .animated-text b.back {
   color: #048BA8;
 }
-.zero .animated-text bold.sass {
+.zero .animated-text b.sass {
   color: #058C42;
 }
 
@@ -261,6 +283,7 @@ a {
   }
 }
 .resume {
+  width: 100%;
   background-color: #F8F4F9;
   color: #2D3142;
   padding: 5rem 0;
@@ -294,7 +317,7 @@ a {
   border-radius: 12px;
   padding: 1rem;
 }
-.resume .roadmap .road-row .experience .basic bold {
+.resume .roadmap .road-row .experience .basic b {
   color: #EF8354;
 }
 .resume .roadmap .road-row .experience .description {
@@ -318,6 +341,7 @@ a {
   display: flex;
   align-items: center;
   gap: 5px;
+  overflow: hidden;
 }
 .resume .roadmap .road-row .road .line .dot {
   width: 5rem;
@@ -362,6 +386,7 @@ a {
 }
 .portfolio .main div.card > img {
   height: 20rem;
+  width: 100%;
   border-radius: 12px 12px 0 0;
 }
 .portfolio .main div.card .main-content {
@@ -662,3 +687,4 @@ a {
 }
 
 /*# sourceMappingURL=estilos.css.map */
+

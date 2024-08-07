@@ -4,26 +4,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <link href='http://fonts.googleapis.com/css?family=Nunito|Rubik' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
         <link href="./styles/estilos.css" rel="stylesheet">
         <script src="main.js"></script>
         
     </head>
 
     <body>
-        <div class="header">
+        <div class="header" id="main">
             <div class="eye">  
                 <div class="pupile"></div>          
             </div>
             <nav class="mainNav container">
-                <a href="#RESUME" class="selected">Resumen</a>
-                <a href="#PORTFOLIO">Portafolio</a>
-                <a href="#SKILLS">Skills</a>
+                <a  id="resume-button" onClick="select('resume')">Resumen</a>
+                <a  id="portfolio-button" onClick="select('portfolio')">Portafolio</a>
+                <a  id="skills-button" onClick="select('skills')">Skills</a>
             </nav>
         </div>
         
         <!-- aqui va el titulo, mi puesto actual y una imagen -->
-        <div class="zero container">
+        <div  class="zero container">
             <div class="main">
                 <div class="presentation">
                     <div class="title">
@@ -67,498 +67,502 @@
             </div>-->
         </div>
         
-        
-        <div #RESUME class="resume">
-            <div class="container small ">
-                <h2>Employment History</h2>
-                <div class="roadmap">
-                    <div class="road-row">
-                        <div class="experience">
-                            <p class="title">Computer Systems Engineering</p>
-                            <div class="basic">
-                                <p><bold>Type:</bold> Studies</p>
-                                <div class="place">
-                                    <p> <bold>Institute:</bold> Escuela Superior de Cómputo (ESCOM)</p>
-                                    <p> Instituto Politécnico Nacional (IPN)</p>
+        <div>
+            <div id="resume" class="resume">
+                <div class="container small ">
+                    <h2>Employment History</h2>
+                    <div class="roadmap">
+                        <div class="road-row">
+                            <div class="experience">
+                                <p class="title">Computer Systems Engineering</p>
+                                <div class="basic">
+                                    <p><bold>Type:</bold> Studies</p>
+                                    <div class="place">
+                                        <p> <bold>Institute:</bold> Escuela Superior de Cómputo (ESCOM)</p>
+                                        <p> Instituto Politécnico Nacional (IPN)</p>
+                                    </div>
+                                    <div class="direction"><bold>Direction:</bold> Mexico City</div>
+                                    <div class="dates">
+                                        <p> <bold>From:</bold> august 2016 <bold>To:</bold> December 2021 </p>
+                                    </div>
                                 </div>
-                                <div class="direction"><bold>Direction:</bold> Mexico City</div>
-                                <div class="dates">
-                                    <p> <bold>From:</bold> august 2016 <bold>To:</bold> December 2021 </p>
+                                <div class="description active">
+                                    <p>One of the best places where I have studied. Here I developed my skills on embbeded systems and on web development. 
+                                        My last project which I graduated with, was a web application with Angular and Django, this app used users grocery's information 
+                                        ( web app and an embbeded system scale to upload the information) and what the user likes ( recommendation system with fuzzy system )
+                                        to recommend recipies.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="description active">
-                                <p>One of the best places where I have studied. Here I developed my skills on embbeded systems and on web development. 
-                                    My last project which I graduated with, was a web application with Angular and Django, this app used users grocery's information 
-                                    ( web app and an embbeded system scale to upload the information) and what the user likes ( recommendation system with fuzzy system )
-                                    to recommend recipies.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- <div class="road">
-                            <div class="line">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <div class="line col">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                        </div> -->
-                    </div>
-                    <div class="road-row">
-                        <div class="road left">
-                            <!-- <div class="line">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                            <div class="line col">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
+                            <!-- <div class="road">
+                                <div class="line">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="line col">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
                             </div> -->
                         </div>
-                        <div class="experience ">
-                            <p class="title">Web developer</p>
-                            <div class="basic">
-                                <p><bold>Type:</bold> Job</p>
-                                <div class="place">
-                                    <p class="place"><bold>Work Place:</bold> Go Sharp</p>
+                        <div class="road-row">
+                            <div class="road left">
+                                <!-- <div class="line">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
                                 </div>
-                                <div class="direction"><bold>Direction: </bold>Mexico City</div>
-                                <!-- <img class="logo" src="./static/images/logos/companies/IPN.png"> -->
-                                <div class="dates">
-                                    <p> <bold>From:</bold> July 2019 <bold>To:</bold> January 2021 </p>
+                                <div class="line col">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div> -->
+                            </div>
+                            <div class="experience ">
+                                <p class="title">Web developer</p>
+                                <div class="basic">
+                                    <p><bold>Type:</bold> Job</p>
+                                    <div class="place">
+                                        <p class="place"><bold>Work Place:</bold> Go Sharp</p>
+                                    </div>
+                                    <div class="direction"><bold>Direction: </bold>Mexico City</div>
+                                    <!-- <img class="logo" src="./static/images/logos/companies/IPN.png"> -->
+                                    <div class="dates">
+                                        <p> <bold>From:</bold> July 2019 <bold>To:</bold> January 2021 </p>
+                                    </div>
+                                </div>
+                                <div class="description active">
+                                    <p>Migration of code implementation from Django or Angular JS to Angular (9-14) and 
+                                        Django Rest, while fixing bugs in previous and current app version. 
+                                        Implementation of new technologies such as Celery to redis for backend forms 
+                                        validations with database, upload documents to Amazon S3 or Azure Blob storage.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="description active">
-                                <p>Migration of code implementation from Django or Angular JS to Angular (9-14) and 
-                                    Django Rest, while fixing bugs in previous and current app version. 
-                                    Implementation of new technologies such as Celery to redis for backend forms 
-                                    validations with database, upload documents to Amazon S3 or Azure Blob storage.
-                                </p>
-                            </div>
                         </div>
-                    </div>
-                    <div class="road-row">
-                        <div class="experience">
-                            <p class="title">Head of web development</p>
-                            <div class="basic">
-                                <p> <bold>Type:</bold> Job</p>
-                                <div class="place">
-                                    <p class="place"><bold>Work Place:</bold> Go Sharp</p>
+                        <div class="road-row">
+                            <div class="experience">
+                                <p class="title">Head of web development</p>
+                                <div class="basic">
+                                    <p> <bold>Type:</bold> Job</p>
+                                    <div class="place">
+                                        <p class="place"><bold>Work Place:</bold> Go Sharp</p>
+                                    </div>
+                                    <div class="direction"><bold>Direction:</bold> Mexico City</div>
+                                    <!-- <img class="logo" src="./static/images/logos/companies/IPN.png"> -->
+                                    <div class="dates">
+                                        <p><bold>From:</bold> January 2021  Present </p>
+                                    </div>
                                 </div>
-                                <div class="direction"><bold>Direction:</bold> Mexico City</div>
-                                <!-- <img class="logo" src="./static/images/logos/companies/IPN.png"> -->
-                                <div class="dates">
-                                    <p><bold>From:</bold> January 2021  Present </p>
+                                <div class="description active">
+                                    <p>Migration of code implementation from Django or Angular JS to Angular (9-14) and 
+                                        Django Rest, while fixing bugs in previous and current app version. 
+                                        Implementation of new technologies such as Celery to redis for backend forms 
+                                        validations with database, upload documents to Amazon S3 or Azure Blob storage.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="description active">
-                                <p>Migration of code implementation from Django or Angular JS to Angular (9-14) and 
-                                    Django Rest, while fixing bugs in previous and current app version. 
-                                    Implementation of new technologies such as Celery to redis for backend forms 
-                                    validations with database, upload documents to Amazon S3 or Azure Blob storage.
-                                </p>
+                            <!-- <div class="road">
+                                <div class="line">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="line col">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div> 
+            </div >
+            <!-- después los otros proyectos e imagenes de los proyectos -->
+            <div id="portfolio" class="portfolio container">
+                <h2>Portfolio</h2>
+                <div class="main ">
+                    <div class="card">
+                        <!-- <div class="preview"> -->
+                        <img src="./static/images/portfolio.gif">
+                        <!-- </div> -->
+                        <div class="main-content">
+                            <h3>Portfolio</h3>
+                            <div class="technologies">
+                                <img src="./static/images/logos/frameworks/mongodb.svg">
+                                <img src="./static/images/logos/frameworks/express.svg">
+                                <img src="./static/images/logos/frameworks/angular.svg">
+                                <img src="./static/images/logos/frameworks/node.svg">
                             </div>
-                        </div>
-                        <!-- <div class="road">
-                            <div class="line">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
+                            <div class="technologies">
+                                <img src="./static/images/logos/languages/typescript.svg">
+                                <img src="./static/images/logos/languages/javascript.svg">
                             </div>
-                            <div class="line col">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
+                            <div class="description">
+                                <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
                             </div>
-                        </div> -->
+                            <button class="btn"> Check repository </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <div class="preview"> -->
+                        <img src="./static/images/mock_project.gif">
+                        <!-- </div> -->
+                        <div class="main-content">
+                            <h3>Portfolio</h3>
+                            <div class="technologies">
+                                <img src="./static/images/logos/frameworks/mongodb.svg">
+                                <img src="./static/images/logos/frameworks/express.svg">
+                                <img src="./static/images/logos/frameworks/angular.svg">
+                                <img src="./static/images/logos/frameworks/node.svg">
+                            </div>
+                            <div class="technologies">
+                                <img src="./static/images/logos/languages/typescript.svg">
+                                <img src="./static/images/logos/languages/javascript.svg">
+                            </div>
+                            <div class="description">
+                                <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
+                            </div>
+                            <button class="btn"> Check repository </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <div class="preview"> -->
+                        <img src="./static/images/mock_project.gif">
+                        <!-- </div> -->
+                        <div class="main-content">
+                            <h3>Portfolio</h3>
+                            <div class="technologies">
+                                <img src="./static/images/logos/frameworks/mongodb.svg">
+                                <img src="./static/images/logos/frameworks/express.svg">
+                                <img src="./static/images/logos/frameworks/angular.svg">
+                                <img src="./static/images/logos/frameworks/node.svg">
+                            </div>
+                            <div class="technologies">
+                                <img src="./static/images/logos/languages/typescript.svg">
+                                <img src="./static/images/logos/languages/javascript.svg">
+                            </div>
+                            <div class="description">
+                                <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
+                            </div>
+                            <button class="btn"> Check repository </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <div class="preview"> -->
+                        <img src="./static/images/mock_project.gif">
+                        <!-- </div> -->
+                        <div class="main-content">
+                            <h3>Portfolio</h3>
+                            <div class="technologies">
+                                <img src="./static/images/logos/frameworks/mongodb.svg">
+                                <img src="./static/images/logos/frameworks/express.svg">
+                                <img src="./static/images/logos/frameworks/angular.svg">
+                                <img src="./static/images/logos/frameworks/node.svg">
+                            </div>
+                            <div class="technologies">
+                                <img src="./static/images/logos/languages/typescript.svg">
+                                <img src="./static/images/logos/languages/javascript.svg">
+                            </div>
+                            <div class="description">
+                                <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
+                            </div>
+                            <button class="btn"> Check repository </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <div class="preview"> -->
+                        <img src="./static/images/mock_project.gif">
+                        <!-- </div> -->
+                        <div class="main-content">
+                            <h3>Portfolio</h3>
+                            <div class="technologies">
+                                <img src="./static/images/logos/frameworks/mongodb.svg">
+                                <img src="./static/images/logos/frameworks/express.svg">
+                                <img src="./static/images/logos/frameworks/angular.svg">
+                                <img src="./static/images/logos/frameworks/node.svg">
+                            </div>
+                            <div class="technologies">
+                                <img src="./static/images/logos/languages/typescript.svg">
+                                <img src="./static/images/logos/languages/javascript.svg">
+                            </div>
+                            <div class="description">
+                                <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
+                            </div>
+                            <button class="btn"> Check repository </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <div class="preview"> -->
+                        <img src="./static/images/mock_project.gif">
+                        <!-- </div> -->
+                        <div class="main-content">
+                            <h3>Portfolio</h3>
+                            <div class="technologies">
+                                <img src="./static/images/logos/frameworks/mongodb.svg">
+                                <img src="./static/images/logos/frameworks/express.svg">
+                                <img src="./static/images/logos/frameworks/angular.svg">
+                                <img src="./static/images/logos/frameworks/node.svg">
+                            </div>
+                            <div class="technologies">
+                                <img src="./static/images/logos/languages/typescript.svg">
+                                <img src="./static/images/logos/languages/javascript.svg">
+                            </div>
+                            <div class="description">
+                                <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
+                            </div>
+                            <button class="btn"> Check repository </button>
+                        </div>
                     </div>
                 </div>
-            </div> 
-        </div >
-        <!-- después los otros proyectos e imagenes de los proyectos -->
-        <div #PORTFOLIO class="portfolio container">
-            <h2>Portfolio</h2>
-            <div class="main ">
-                <div class="card">
-                    <!-- <div class="preview"> -->
-                    <img src="./static/images/mock_project.gif">
-                    <!-- </div> -->
-                    <div class="main-content">
-                        <h3>Portfolio</h3>
-                        <div class="technologies">
-                            <img src="./static/images/logos/frameworks/mongodb.svg">
-                            <img src="./static/images/logos/frameworks/express.svg">
-                            <img src="./static/images/logos/frameworks/angular.svg">
-                            <img src="./static/images/logos/frameworks/node.svg">
-                        </div>
-                        <div class="technologies">
-                            <img src="./static/images/logos/languages/typescript.svg">
-                            <img src="./static/images/logos/languages/javascript.svg">
-                        </div>
-                        <div class="description">
-                            <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
-                        </div>
-                        <button class="btn"> Check repository </button>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <div class="preview"> -->
-                    <img src="./static/images/mock_project.gif">
-                    <!-- </div> -->
-                    <div class="main-content">
-                        <h3>Portfolio</h3>
-                        <div class="technologies">
-                            <img src="./static/images/logos/frameworks/mongodb.svg">
-                            <img src="./static/images/logos/frameworks/express.svg">
-                            <img src="./static/images/logos/frameworks/angular.svg">
-                            <img src="./static/images/logos/frameworks/node.svg">
-                        </div>
-                        <div class="technologies">
-                            <img src="./static/images/logos/languages/typescript.svg">
-                            <img src="./static/images/logos/languages/javascript.svg">
-                        </div>
-                        <div class="description">
-                            <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
-                        </div>
-                        <button class="btn"> Check repository </button>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <div class="preview"> -->
-                    <img src="./static/images/mock_project.gif">
-                    <!-- </div> -->
-                    <div class="main-content">
-                        <h3>Portfolio</h3>
-                        <div class="technologies">
-                            <img src="./static/images/logos/frameworks/mongodb.svg">
-                            <img src="./static/images/logos/frameworks/express.svg">
-                            <img src="./static/images/logos/frameworks/angular.svg">
-                            <img src="./static/images/logos/frameworks/node.svg">
-                        </div>
-                        <div class="technologies">
-                            <img src="./static/images/logos/languages/typescript.svg">
-                            <img src="./static/images/logos/languages/javascript.svg">
-                        </div>
-                        <div class="description">
-                            <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
-                        </div>
-                        <button class="btn"> Check repository </button>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <div class="preview"> -->
-                    <img src="./static/images/mock_project.gif">
-                    <!-- </div> -->
-                    <div class="main-content">
-                        <h3>Portfolio</h3>
-                        <div class="technologies">
-                            <img src="./static/images/logos/frameworks/mongodb.svg">
-                            <img src="./static/images/logos/frameworks/express.svg">
-                            <img src="./static/images/logos/frameworks/angular.svg">
-                            <img src="./static/images/logos/frameworks/node.svg">
-                        </div>
-                        <div class="technologies">
-                            <img src="./static/images/logos/languages/typescript.svg">
-                            <img src="./static/images/logos/languages/javascript.svg">
-                        </div>
-                        <div class="description">
-                            <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
-                        </div>
-                        <button class="btn"> Check repository </button>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <div class="preview"> -->
-                    <img src="./static/images/mock_project.gif">
-                    <!-- </div> -->
-                    <div class="main-content">
-                        <h3>Portfolio</h3>
-                        <div class="technologies">
-                            <img src="./static/images/logos/frameworks/mongodb.svg">
-                            <img src="./static/images/logos/frameworks/express.svg">
-                            <img src="./static/images/logos/frameworks/angular.svg">
-                            <img src="./static/images/logos/frameworks/node.svg">
-                        </div>
-                        <div class="technologies">
-                            <img src="./static/images/logos/languages/typescript.svg">
-                            <img src="./static/images/logos/languages/javascript.svg">
-                        </div>
-                        <div class="description">
-                            <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
-                        </div>
-                        <button class="btn"> Check repository </button>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <div class="preview"> -->
-                    <img src="./static/images/mock_project.gif">
-                    <!-- </div> -->
-                    <div class="main-content">
-                        <h3>Portfolio</h3>
-                        <div class="technologies">
-                            <img src="./static/images/logos/frameworks/mongodb.svg">
-                            <img src="./static/images/logos/frameworks/express.svg">
-                            <img src="./static/images/logos/frameworks/angular.svg">
-                            <img src="./static/images/logos/frameworks/node.svg">
-                        </div>
-                        <div class="technologies">
-                            <img src="./static/images/logos/languages/typescript.svg">
-                            <img src="./static/images/logos/languages/javascript.svg">
-                        </div>
-                        <div class="description">
-                            <p>This template! Explore inside the code to check if you like how the code was done, also you can reuse it if you like.</p>
-                        </div>
-                        <button class="btn"> Check repository </button>
-                    </div>
-                </div>
-            </div>
-        </div >
-        <!-- la sección del portafolio con tarjetas de proyectos y links -->
+            </div >
+            <!-- la sección del portafolio con tarjetas de proyectos y links -->
 
 
-        <div #SKILLS class="skills-section container">
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="section white">
-                    <p class="title">Languages</p>
-                    <div class="skill">
-                        <p>Typescript</p>
-                        <img src="./static/images/logos/languages/typescript.svg">
-                    </div>
-                    <div class="skill">
-                        <p>Javascript</p>
-                        <img src="./static/images/logos/languages/javascript.svg">
-                    </div>
-                    <div class="skill">
-                        <p>Python</p>
-                        <img src="./static/images/logos/languages/pythonc.svg" class="normal">
-                    </div>
-                    <div class="skill">
-                        <p>Golang</p>
-                        <img src="./static/images/logos/languages/golang.svg" class="normal">
-                    </div>
-                    <div class="skill">
-                        <p>Git</p>
-                        <img src="./static/images/logos/languages/git.svg" class="normal">
-                    </div>
-                    <div class="skill">
-                        <p>MongoDB</p>
-                        <img src="./static/images/logos/frameworks/mongoc.svg" class="normal">
-                    </div>
-                    <div class="skill">
-                        <p>PSQL</p>
-                        <img src="./static/images/logos/languages/postgresql.svg" class="normal">
-                    </div>
-                    <div class="skill">
-                        <p>Sass</p>
-                        <img src="./static/images/logos/languages/sass.svg">
-                    </div>
-                    <div class="skill">
-                        <p>CSS</p>
-                        <img src="./static/images/logos/languages/css.svg">
-                    </div>
-                    <div class="skill">
-                        <p>HTML</p>
-                        <img src="./static/images/logos/languages/html.svg">
-                    </div>
-                </div>
-                <div class="section white">
-                    <p class="title">Frameworks</p>
-                    <div class="skill">
-                        <p>Angular</p>
-                        <img src="./static/images/logos/frameworks/angularc.svg" class="normal">
-                    </div>
-                    <div class="skill">
-                        <p>React</p>
-                        <img src="./static/images/logos/frameworks/reactc.svg" class="normal">
-                    </div>
-                    <div class="skill">
-                        <p>VueJs</p>
-                        <img src="./static/images/logos/frameworks/vuejsc.svg" class="normal">
-                    </div>
-                    <div class="skill">
-                        <p>Express</p>
-                        <img src="./static/images/logos/frameworks/express.svg">
-                    </div>
-                    <div class="skill">
-                        <p>NodeJs</p>
-                        <img src="./static/images/logos/frameworks/node.svg">
-                    </div>
-                    <div class="skill">
-                        <p>Django</p>
-                        <img src="./static/images/logos/frameworks/django.svg" class="normal">
-                    </div>
-                </div>
-                <div class="skills column">
-                    <div class="section">
-                        <p class="title">Cloud</p>
-                        <div class="skill">
-                            <p>AWS EC2</p>
-                            <img src="./static/images/logos/cloud/EC2.svg">
-                        </div>
-                        <div class="skill">
-                            <p>AWS SES</p>
-                            <img src="./static/images/logos/cloud/SES.svg">
-                        </div>
-                        <div class="skill">
-                            <p>AWS lambda</p>
-                            <img src="./static/images/logos/cloud/Lambda.svg">
-                        </div>
-                        <div class="skill">
-                            <p>AWS S3</p>
-                            <img src="./static/images/logos/cloud/S3.svg">
-                        </div>
-                    </div>
-                    <div class="section white normal">
-                        <p class="title">Managment</p>
-                        <div class="skill">
-                            <p>Jira</p>
-                            <img src="./static/images/logos/cloud/jira.svg">
-                        </div>
-                        <div class="skill">
-                            <p>Scrum</p>
-                            <img src="./static/images/logos/personal/scrum.svg" class="normal">
-                        </div>
-                    </div>
-                </div>
-                <div class="skills ">
+            <div id="skills" class="skills-section container">
+                <h2>Skills</h2>
+                <div class="skills">
                     <div class="section white">
-                        <p class="title">Soft skills</p>
+                        <p class="title">Languages</p>
                         <div class="skill">
-                            <p>Collaboration</p>
-                            <img src="./static/images/logos/personal/people.svg" class="normal">
+                            <p>Typescript</p>
+                            <img src="./static/images/logos/languages/typescript.svg">
                         </div>
                         <div class="skill">
-                            <p>Time managment</p>
-                            <img src="./static/images/logos/personal/clock.svg">
+                            <p>Javascript</p>
+                            <img src="./static/images/logos/languages/javascript.svg">
                         </div>
                         <div class="skill">
-                            <p>Planning</p>
-                            <img src="./static/images/logos/personal/map.svg">
+                            <p>Python</p>
+                            <img src="./static/images/logos/languages/pythonc.svg" class="normal">
                         </div>
                         <div class="skill">
-                            <p>Setting goals</p>
-                            <img src="./static/images/logos/personal/goals.svg">
+                            <p>Golang</p>
+                            <img src="./static/images/logos/languages/golang.svg" class="normal">
                         </div>
                         <div class="skill">
-                            <p>Decision-making</p>
-                            <img src="./static/images/logos/personal/decision.svg" class="normal">
+                            <p>Git</p>
+                            <img src="./static/images/logos/languages/git.svg" class="normal">
                         </div>
                         <div class="skill">
-                            <p>Self-learning</p>
-                            <img src="./static/images/logos/personal/learn.svg">
-                        </div>
-                    </div>
-                    <div class="section white normal">
-                        <p class="title">Personal interests</p>
-                        <div class="skill">
-                            <p>Fantasy and Science-fiction books</p>
-                            <img src="./static/images/logos/interest/dragon.svg">
+                            <p>MongoDB</p>
+                            <img src="./static/images/logos/frameworks/mongoc.svg" class="normal">
                         </div>
                         <div class="skill">
-                            <p>Outdoor activites</p>
-                            <img src="./static/images/logos/interest/outdoor.svg">
+                            <p>PSQL</p>
+                            <img src="./static/images/logos/languages/postgresql.svg" class="normal">
                         </div>
                         <div class="skill">
-                            <p>Videogames</p>
-                            <img src="./static/images/logos/interest/videogames.svg">
+                            <p>Sass</p>
+                            <img src="./static/images/logos/languages/sass.svg">
                         </div>
                         <div class="skill">
-                            <p>Manga and anime</p>
-                            <img src="./static/images/logos/interest/manga.svg" class="normal">
+                            <p>CSS</p>
+                            <img src="./static/images/logos/languages/css.svg">
                         </div>
                         <div class="skill">
-                            <p>Embedded systems</p>
-                            <img src="./static/images/logos/interest/system.svg">
-                        </div>
-                        <div class="skill">
-                            <p>Swimming</p>
-                            <img src="./static/images/logos/interest/swimming.svg">
+                            <p>HTML</p>
+                            <img src="./static/images/logos/languages/html.svg">
                         </div>
                     </div>
-                </div>
-                <div class="skills small">
                     <div class="section white">
-                        <p class="title">Personal interests</p>
+                        <p class="title">Frameworks</p>
                         <div class="skill">
-                            <p>Fantasy and Science-fiction books</p>
-                            <img src="./static/images/logos/interest/dragon.svg">
+                            <p>Angular</p>
+                            <img src="./static/images/logos/frameworks/angularc.svg" class="normal">
                         </div>
                         <div class="skill">
-                            <p>Outdoor activites</p>
-                            <img src="./static/images/logos/interest/outdoor.svg">
+                            <p>React</p>
+                            <img src="./static/images/logos/frameworks/reactc.svg" class="normal">
                         </div>
                         <div class="skill">
-                            <p>Videogames</p>
-                            <img src="./static/images/logos/interest/videogames.svg">
+                            <p>VueJs</p>
+                            <img src="./static/images/logos/frameworks/vuejsc.svg" class="normal">
                         </div>
                         <div class="skill">
-                            <p>Manga and anime</p>
-                            <img src="./static/images/logos/interest/manga.svg" class="normal">
+                            <p>Express</p>
+                            <img src="./static/images/logos/frameworks/express.svg">
                         </div>
                         <div class="skill">
-                            <p>Embedded systems</p>
-                            <img src="./static/images/logos/interest/system.svg">
+                            <p>NodeJs</p>
+                            <img src="./static/images/logos/frameworks/node.svg">
                         </div>
                         <div class="skill">
-                            <p>Swimming</p>
-                            <img src="./static/images/logos/interest/swimming.svg">
+                            <p>Django</p>
+                            <img src="./static/images/logos/frameworks/django.svg" class="normal">
+                        </div>
+                    </div>
+                    <div class="skills column">
+                        <div class="section">
+                            <p class="title">Cloud</p>
+                            <div class="skill">
+                                <p>AWS EC2</p>
+                                <img src="./static/images/logos/cloud/EC2.svg">
+                            </div>
+                            <div class="skill">
+                                <p>AWS SES</p>
+                                <img src="./static/images/logos/cloud/SES.svg">
+                            </div>
+                            <div class="skill">
+                                <p>AWS lambda</p>
+                                <img src="./static/images/logos/cloud/Lambda.svg">
+                            </div>
+                            <div class="skill">
+                                <p>AWS S3</p>
+                                <img src="./static/images/logos/cloud/S3.svg">
+                            </div>
+                        </div>
+                        <div class="section white normal">
+                            <p class="title">Managment</p>
+                            <div class="skill">
+                                <p>Jira</p>
+                                <img src="./static/images/logos/cloud/jira.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Scrum</p>
+                                <img src="./static/images/logos/personal/scrum.svg" class="normal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills ">
+                        <div class="section white">
+                            <p class="title">Soft skills</p>
+                            <div class="skill">
+                                <p>Collaboration</p>
+                                <img src="./static/images/logos/personal/people.svg" class="normal">
+                            </div>
+                            <div class="skill">
+                                <p>Time managment</p>
+                                <img src="./static/images/logos/personal/clock.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Planning</p>
+                                <img src="./static/images/logos/personal/map.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Setting goals</p>
+                                <img src="./static/images/logos/personal/goals.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Decision-making</p>
+                                <img src="./static/images/logos/personal/decision.svg" class="normal">
+                            </div>
+                            <div class="skill">
+                                <p>Self-learning</p>
+                                <img src="./static/images/logos/personal/learn.svg">
+                            </div>
+                        </div>
+                        <div class="section white normal">
+                            <p class="title">Personal interests</p>
+                            <div class="skill">
+                                <p>Fantasy and Science-fiction books</p>
+                                <img src="./static/images/logos/interest/dragon.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Outdoor activites</p>
+                                <img src="./static/images/logos/interest/outdoor.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Videogames</p>
+                                <img src="./static/images/logos/interest/videogames.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Manga and anime</p>
+                                <img src="./static/images/logos/interest/manga.svg" class="normal">
+                            </div>
+                            <div class="skill">
+                                <p>Embedded systems</p>
+                                <img src="./static/images/logos/interest/system.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Swimming</p>
+                                <img src="./static/images/logos/interest/swimming.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills small">
+                        <div class="section white">
+                            <p class="title">Personal interests</p>
+                            <div class="skill">
+                                <p>Fantasy and Science-fiction books</p>
+                                <img src="./static/images/logos/interest/dragon.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Outdoor activites</p>
+                                <img src="./static/images/logos/interest/outdoor.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Videogames</p>
+                                <img src="./static/images/logos/interest/videogames.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Manga and anime</p>
+                                <img src="./static/images/logos/interest/manga.svg" class="normal">
+                            </div>
+                            <div class="skill">
+                                <p>Embedded systems</p>
+                                <img src="./static/images/logos/interest/system.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Swimming</p>
+                                <img src="./static/images/logos/interest/swimming.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills small">
+                        <div class="section white">
+                            <p class="title">Managment</p>
+                            <div class="skill">
+                                <p>Jira</p>
+                                <img src="./static/images/logos/cloud/jira.svg">
+                            </div>
+                            <div class="skill">
+                                <p>Scrum</p>
+                                <img src="./static/images/logos/personal/scrum.svg" class="normal">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skills small">
-                    <div class="section white">
-                        <p class="title">Managment</p>
-                        <div class="skill">
-                            <p>Jira</p>
-                            <img src="./static/images/logos/cloud/jira.svg">
-                        </div>
-                        <div class="skill">
-                            <p>Scrum</p>
-                            <img src="./static/images/logos/personal/scrum.svg" class="normal">
-                        </div>
-                    </div>
+            </div >
+            <!-- sección de mis habilidades, intereses y soft skills -->
+            <footer class="footer ">
+                <div class="eye">  
+                    <div class="pupile"></div>          
                 </div>
+                <div class="content">
+                    <h5>Contact me!</h5>
+                    <p>Author: Mauricio Romero</p>
+                    <p>Mail: mauricio.isaac.romero.ponce@gmail.com</p>
+                    <p>Phone: 55-75-52-14-38</p>
+                </div>
+            </footer>
+            <div class="sticky">
+                <p onclick="select('main')">Return to top</p>
             </div>
-        </div >
-        <!-- sección de mis habilidades, intereses y soft skills -->
-        <footer class="footer ">
-            <div class="eye">  
-                <div class="pupile"></div>          
-            </div>
-            <div class="content">
-                <h5>Contact me!</h5>
-                <p>Author: Mauricio Romero</p>
-                <p>Mail: mauricio.isaac.romero.ponce@gmail.com</p>
-                <p>Phone: 55-75-52-14-38</p>
-            </div>
-        </footer>
+        </div>
 
     </body>
 

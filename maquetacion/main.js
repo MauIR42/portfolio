@@ -3,30 +3,27 @@ console.log("hola");
 
 const delay = ms => new Promise( res => setTimeout(res,ms));
 
+let actual = "None"
+
 async function remove(obj){
     // obj.classList.toggle(current);
 }
 
 async function add(obj,word,color){
     let bar = document.getElementById("bar");
-    console.log("entra a remove");
     let len = obj.textContent.length;
     for(let i =0; i<len -1;i++){
         let c_t = obj.textContent;
         obj.textContent = c_t.substring(0,c_t.length-1);
-        console.log("espera")
-        await delay(50);        
+        await delay(100);        
     }
-
-
     let text = "";
     obj.style.color  = color;
     bar.style.borderColor = color;
-    console.log("entra a add");
     for(let i =0; i<word.length;i++){
         text += word[i]
         obj.textContent = text
-        await delay(50);
+        await delay(100);
     }
 }
 
@@ -45,15 +42,24 @@ function init(){
 
     let subtitle = document.getElementById("movingtext");
     
-    console.log(subtitle);
     let curr_indx = 0;
     const interval = setInterval(()=>{
         let next = ++curr_indx % texts.length
         let text = texts[ next]['text'];
-        console.log(text)
         let color = texts[next]['color'];
         add(subtitle,text,color);
     }, 5000)
+
+}
+
+function select(objective){
+    let curr = document.getElementById(actual);
+    if(curr)
+        curr.classList.remove("selected");
+    actual = objective + '-button';
+    if(objective != 'main')
+        document.getElementById(actual).classList.add("selected");
+    document.getElementById(objective).scrollIntoView({behavior:"smooth",block:"start"})
 
 }
 
