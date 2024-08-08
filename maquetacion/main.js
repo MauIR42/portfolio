@@ -59,7 +59,15 @@ function select(objective){
     actual = objective + '-button';
     if(objective != 'main')
         document.getElementById(actual).classList.add("selected");
-    document.getElementById(objective).scrollIntoView({behavior:"smooth",block:"start"})
+    // document.getElementById(objective).scrollIntoView({behavior:"smooth",block:"start"})
+    let obj = document.getElementById(objective);
+    var elementPosition = obj.getBoundingClientRect().top;
+    let offset = elementPosition + window.scrollY - 100;
+    window.scrollTo({
+        top: offset,
+        behavior: "smooth"
+   });
+
 
 }
 
