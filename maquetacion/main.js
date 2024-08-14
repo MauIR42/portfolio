@@ -5,6 +5,8 @@ const delay = ms => new Promise( res => setTimeout(res,ms));
 
 let actual = "None"
 
+let displayed = false;
+
 async function remove(obj){
     // obj.classList.toggle(current);
 }
@@ -53,6 +55,9 @@ function init(){
 }
 
 function select(objective){
+    // document.getElementById('mobile-menu').classList.remove("active");
+    displayed = true;
+    activeMenu();
     let curr = document.getElementById(actual);
     if(curr)
         curr.classList.remove("selected");
@@ -69,6 +74,18 @@ function select(objective){
    });
 
 
+}
+
+function activeMenu(){
+    let type = !displayed;
+    if(type){
+        document.getElementById('mobile-menu').classList.add("active");
+        document.getElementById('main').classList.add("active");
+    }else{
+        document.getElementById('mobile-menu').classList.remove("active");
+        document.getElementById('main').classList.remove("active");
+    }
+    displayed = type;
 }
 
 window.onload = init;

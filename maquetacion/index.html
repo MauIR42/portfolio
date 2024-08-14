@@ -11,27 +11,28 @@
     </head>
 
     <body>
-        <div class="header" id="main">
+        <div class="header " id="main">
+            <div class="mobile-icon" id="butonStatus">
+                <img src="./static/icons/menu.svg" onClick="activeMenu()">
+            </div>
             <div class="eye">  
                 <div class="pupile"></div>          
             </div>
             <nav class="mainNav container">
                 <a  id="resume-button" onClick="select('resume')">Resumen</a>
-                <a  id="portfolio-button" onClick="select('portfolio')">Portafolio</a>
+                <a  id="portfolio-button" onClick="select('portfolio')">Portfolio</a>
                 <a  id="skills-button" onClick="select('skills')">Skills</a>
             </nav>
-            <div class="mobile-icon active">
-                <img src="./static/icons/menu.svg">
-            </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="mainNav container">
+                <a  id="resume-button" onClick="select('resume')">Resumen</a>
+                <a  id="portfolio-button" onClick="select('portfolio')">Portfolio</a>
+                <a  id="skills-button" onClick="select('skills')">Skills</a>
+            </nav>
         </div>
 
-        <div class="mobile-menu active">
-            <nav>
-                <a  id="resume-button" onClick="select('resume')">Resumen</a>
-                <a  id="portfolio-button" onClick="select('portfolio')">Portafolio</a>
-                <a  id="skills-button" onClick="select('skills')">Skills</a>
-            </nav>
-        </div>
+        
         
         <!-- aqui va el titulo, mi puesto actual y una imagen -->
         <div  class="zero container">
@@ -77,8 +78,9 @@
                 <div class="bar"></div>
             </div>-->
         </div>
+
         
-        <div>
+        <!-- <div> -->
             <div id="resume" class="resume">
                 <div class="container small ">
                     <h2>Employment History</h2>
@@ -570,10 +572,7 @@
                     <p>Phone: 55-75-52-14-38</p>
                 </div>
             </footer>
-            <div class="sticky">
-                <p onclick="select('main')">Return to top</p>
-            </div>
-        </div>
+        <!-- </div> -->
 
     </body>
 
